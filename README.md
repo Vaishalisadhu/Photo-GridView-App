@@ -8,7 +8,7 @@ This App Show's List of Images in Grid View which is Parsed from JSON file.
 
 **2. Images Grid Screen**
 
-When launch home screen, show a scrollable grid of pictures with Animation. When the user taps on an image that should open the image detail screen.
+When launch home screen, shows scrollable grid of pictures with Animations. When the user taps on an image that should open the image detail screen.
 
 **2. Image Detail Screen**
 
