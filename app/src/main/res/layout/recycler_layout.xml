@@ -28,15 +28,9 @@
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/selectedImage"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                fresco:placeholderImage="@drawable/myPlaceholderImage" />
+                android:layout_height="200dp"
+                fresco:viewAspectRatio="1.33"/>
 
-      <!--  <ImageView
-            android:id="@+id/selectedImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY" />
--->
 
             <TextView
                 android:id="@+id/txtTitle"

@@ -3,6 +3,7 @@ package com.photogridviewapp.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.photogridviewapp.R;
 import com.photogridviewapp.helper.ConstantDataMember;
@@ -57,9 +60,13 @@ public class PhotoGalleryAdapter extends RecyclerView.Adapter<PhotoGalleryAdapte
             if (imageDataModel.getImageUrl() != null && !TextUtils.isEmpty(imageDataModel.getImageUrl())) {
 
                 imgUrl = imageDataModel.getImageUrl();
+                Uri imageUri = Uri.parse(imgUrl);
+                DraweeController controller = Fresco.newDraweeControllerBuilder()
+                        .setUri(imageUri)
+                        .build();
+                holder.selectedImage.setController(controller);
 
-                Glide.with(context).load(imageDataModel.getImageUrl())
-                        .into(holder.selectedImage);
+
             }
 
             if (imageDataModel.getTitle() != null && !TextUtils.isEmpty(imageDataModel.getTitle())) {
