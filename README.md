@@ -1,8 +1,8 @@
-# Photo-GridView-App
+# Photo GridView App
 
 This App Show's List of Images in Grid View which is Parsed from JSON file. 
 
-# Screens
+# Screens Info:
 
 **1. Splash Screen**
 
